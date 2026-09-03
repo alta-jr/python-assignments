@@ -1,0 +1,242 @@
+\documentclass[11pt]{article}
+\newcommand{\DocRunningHead}{Intermediate Algebra}
+\newcommand{\DocShortTitle}{Chapters 1--2 Quiz --- Solutions}
+\input{preamble}
+
+\begin{document}
+
+\quiztitle{Intermediate Algebra --- Instructor Copy}{Chapters 1 \& 2 Quiz: Solutions}
+  {Full worked solutions, with the source problem cited for each question}
+
+\noindent\small
+\textbf{Grading note.}\ Each question is worth 10 points. The boxed value is the answer;
+the lines above it are the work students are expected to show. Where a problem has a
+standard trap --- an extraneous root, a strict versus non-strict domain endpoint, an
+excluded value in a range --- it is flagged in italics so partial credit can be applied
+consistently.\par
+
+\vspace{4pt}
+
+\parthead{Part I --- Chapter 1}{Basic Techniques for Solving Equations}
+
+\begin{questions}
+
+\item \source{Review Problem 1.23(b), \S1.1}\\
+  Solve $x - 1 \le 3x + 2 \le 2x + 6$; write the answer in interval notation.
+  \begin{solution}
+    A double inequality is two inequalities at once; solve each separately and intersect.
+
+    Left: $x - 1 \le 3x + 2$. Subtracting $x$ from both sides gives $-1 \le 2x + 2$,
+    so $-3 \le 2x$, and $x \ge -\tfrac{3}{2}$.
+
+    Right: $3x + 2 \le 2x + 6$. Subtracting $2x$ gives $x + 2 \le 6$, so $x \le 4$.
+
+    Both must hold, so the solution is the overlap.
+    \[ \answer{\left[-\tfrac{3}{2},\ 4\right]} \]
+    \textit{Note: no multiplication or division by a negative occurs here, so no inequality
+    sign flips. Both endpoints are included because both inequalities are non-strict.}
+  \end{solution}
+
+\item \source{Review Problem 1.19(a), \S1.3}\\
+  Solve the system $4x + 5y = 43$, $9x - 2y = 57$.
+  \begin{solution}
+    Eliminate $y$: multiply the first equation by 2 and the second by 5 so the
+    $y$-coefficients become $+10$ and $-10$.
+    \[
+      \begin{aligned}
+        8x + 10y &= 86,\\
+        45x - 10y &= 285.
+      \end{aligned}
+    \]
+    Adding gives $53x = 371$, so $x = 7$. Substituting into $4x + 5y = 43$ gives
+    $28 + 5y = 43$, so $5y = 15$ and $y = 3$.
+
+    Check in the second original equation: $9(7) - 2(3) = 63 - 6 = 57$. \checkmark
+    \[ \answer{(x,y) = (7,3)} \]
+  \end{solution}
+
+\item \source{Review Problem 1.20, \S1.2}\\
+  Jeff is 4 times older than his daughter. Five years ago he was 9 times older than his
+  daughter. How old is his daughter?
+  \begin{solution}
+    Let $d$ be the daughter's age now; then Jeff's age is $4d$. Five years ago their ages
+    were $d - 5$ and $4d - 5$, and the second was 9 times the first:
+    \[ 4d - 5 = 9(d - 5). \]
+    Expanding gives $4d - 5 = 9d - 45$, so $40 = 5d$ and $d = 8$.
+
+    Check: the daughter is 8 and Jeff is 32; five years ago they were 3 and 27, and
+    $27 = 9 \cdot 3$. \checkmark
+    \[ \answer{\text{The daughter is } 8 \text{ years old.}} \]
+    \textit{Note: students who set up $4d - 5 = 9d - 5$ (forgetting to age the daughter
+    down as well) get $d = 0$; the check is what catches this.}
+  \end{solution}
+
+\item \source{Review Problem 1.24, \S1.2}\\
+  Find all ordered pairs $(x,y)$ with $\sqrt{x} + \sqrt{y} = 7$ and
+  $3\sqrt{x} - 4\sqrt{y} = -14$.
+  \begin{solution}
+    The system is linear in $\sqrt{x}$ and $\sqrt{y}$, so substitute
+    $u = \sqrt{x}$ and $v = \sqrt{y}$, where $u \ge 0$ and $v \ge 0$:
+    \[
+      \begin{aligned}
+        u + v &= 7,\\
+        3u - 4v &= -14.
+      \end{aligned}
+    \]
+    From the first, $u = 7 - v$. Substituting into the second gives
+    $3(7 - v) - 4v = -14$, so $21 - 7v = -14$, hence $v = 5$ and $u = 2$.
+
+    Both are non-negative, so both are legitimate square roots. Squaring,
+    $x = u^2 = 4$ and $y = v^2 = 25$.
+
+    Check: $\sqrt{4} + \sqrt{25} = 2 + 5 = 7$ and $3(2) - 4(5) = -14$. \checkmark
+    \[ \answer{(x,y) = (4,25)} \]
+    \textit{Note: a negative value of $u$ or $v$ would have to be discarded, since
+    $\sqrt{\phantom{x}}$ denotes the non-negative root. Here neither is negative, so
+    exactly one ordered pair survives.}
+  \end{solution}
+
+\item \source{Review Problem 1.21(a), \S1.4}\\
+  Solve $8x + y - z = 46$, \; $3x + 4y - 2z = 27$, \; $4x - y + z = 14$.
+  \begin{solution}
+    The first and third equations have opposite $y$- and $z$-coefficients, so adding them
+    eliminates both variables at once:
+    \[ (8x + y - z) + (4x - y + z) = 46 + 14 \quad\Longrightarrow\quad 12x = 60, \]
+    so $x = 5$.
+
+    Substituting $x = 5$ into the third equation gives $20 - y + z = 14$, so $y - z = 6$.
+
+    Substituting $x = 5$ into the second gives $15 + 4y - 2z = 27$, so $4y - 2z = 12$,
+    that is, $2y - z = 6$.
+
+    Subtracting $y - z = 6$ from $2y - z = 6$ gives $y = 0$, and then $z = y - 6 = -6$.
+
+    Check: $8(5) + 0 - (-6) = 46$ \checkmark, \;
+    $3(5) + 0 - 2(-6) = 27$ \checkmark, \;
+    $4(5) - 0 + (-6) = 14$ \checkmark.
+    \[ \answer{(x,y,z) = (5,\,0,\,-6)} \]
+    \textit{Note: spotting that equations 1 and 3 add to eliminate two variables is the
+    intended shortcut, but any correct elimination or substitution order earns full credit.}
+  \end{solution}
+
+\end{questions}
+
+\parthead{Part II --- Chapter 2}{Functions Review}
+
+\begin{questions}[resume]
+
+\item \source{Review Problem 2.23(d), \S2.1}\\
+  Find the domain and range of $S(x) = \dfrac{12x-9}{6-9x}$.
+  \begin{solution}
+    \textbf{Domain.} The only restriction is that the denominator cannot vanish:
+    $6 - 9x = 0$ when $x = \tfrac{2}{3}$.
+    \[ \answer{\text{Domain: } \left(-\infty,\tfrac{2}{3}\right) \cup \left(\tfrac{2}{3},\infty\right)} \]
+
+    \textbf{Range.} Use the chapter's strategy: set the function equal to a new variable
+    and solve for $x$. Writing $y = \dfrac{12x-9}{6-9x}$ and clearing the denominator,
+    \[ y(6-9x) = 12x - 9 \quad\Longrightarrow\quad 6y - 9xy = 12x - 9. \]
+    Collect the $x$ terms on one side: $6y + 9 = 12x + 9xy = x(12 + 9y)$, so
+    \[ x = \frac{6y+9}{9y+12}. \]
+    This produces a valid input $x$ for every $y$ except the one making the denominator
+    zero: $9y + 12 = 0$, i.e. $y = -\tfrac{4}{3}$. That value of $y$ is therefore never
+    attained, and every other value is.
+    \[ \answer{\text{Range: } \left(-\infty,-\tfrac{4}{3}\right) \cup \left(-\tfrac{4}{3},\infty\right)} \]
+    \textit{Note: $-\tfrac43$ is the ratio of the leading coefficients, $12/(-9)$ --- the
+    horizontal asymptote. Answers of ``all real numbers'' for the range are the common
+    error and should lose the range half of the credit.}
+  \end{solution}
+
+\item \source{Review Problem 2.24(a), \S2.1}\\
+  Find the domain of $f(x) = \dfrac{1}{\sqrt{2x-5}} + \sqrt{9-3x}$.
+  \begin{solution}
+    Each term imposes its own restriction, and $x$ must satisfy both.
+
+    First term: $\sqrt{2x-5}$ must be defined \emph{and} nonzero, since it sits in a
+    denominator. So $2x - 5 > 0$, giving $x > \tfrac{5}{2}$ --- a \emph{strict} inequality.
+
+    Second term: $9 - 3x \ge 0$, giving $x \le 3$.
+
+    Intersecting the two conditions:
+    \[ \answer{\left(\tfrac{5}{2},\ 3\right]} \]
+    \textit{Note: the endpoint asymmetry is the whole point of the problem. Writing
+    $\left[\tfrac52, 3\right]$ (treating the first radical as if it were not in a
+    denominator) is the expected error.}
+  \end{solution}
+
+\item \source{Review Problem 2.35, \S2.2}\\
+  How can the graph of $f(x)$ be used to produce the graph of $y = |f(x)|$?
+  \begin{solution}
+    By the definition of absolute value,
+    \[
+      |f(x)| =
+      \begin{cases}
+        f(x), & \text{if } f(x) \ge 0,\\
+        -f(x), & \text{if } f(x) < 0.
+      \end{cases}
+    \]
+    So wherever the graph of $f$ is on or above the $x$-axis, the graph of $|f|$ is
+    identical to it; wherever the graph of $f$ is below the $x$-axis, the output changes
+    sign, which reflects that piece across the $x$-axis.
+    \[ \answertext{Keep every part of the graph of $f$ that lies on or above the
+      $x$-axis, and reflect every part that lies below the $x$-axis across the $x$-axis.} \]
+    \textit{Full credit requires both halves of the description plus a reason. The
+    resulting graph never dips below the $x$-axis, and it meets the original graph exactly
+    at the $x$-intercepts of $f$, where the two pieces join.}
+  \end{solution}
+
+\item \source{Review Problem 2.25, \S2.3}\\
+  With $f(x) = \dfrac{4x}{x+2}$ and $g(x) = \dfrac{2x}{x+4}$, find $f(g(x))$.
+  \begin{solution}
+    Substitute $g(x)$ into $f$ wherever $x$ appears:
+    \[
+      f(g(x)) = \frac{4 \cdot \dfrac{2x}{x+4}}{\dfrac{2x}{x+4} + 2}
+              = \frac{\dfrac{8x}{x+4}}{\dfrac{2x}{x+4} + 2}.
+    \]
+    Multiply the numerator and the denominator by $x + 4$ to clear the inner fractions:
+    \[
+      f(g(x)) = \frac{8x}{2x + 2(x+4)} = \frac{8x}{4x + 8}.
+    \]
+    Dividing numerator and denominator by 4,
+    \[ \answer{f(g(x)) = \frac{2x}{x+2}} \]
+    \textit{Note: strictly, this composition is undefined at $x = -4$ (outside the domain
+    of $g$) and at $x = -2$ (where $g(x) + 2 = 0$), even though the simplified formula
+    hides the first of these. Mentioning either restriction is a bonus, not a requirement.}
+  \end{solution}
+
+\item \source{Review Problem 2.37, \S2.4 \;(Source: AHSME)}\\
+  $f(x) = \dfrac{cx}{2x+3}$ satisfies $f(f(x)) = x$ for all real $x$ except $-\tfrac{3}{2}$.
+  Find $c$.
+  \begin{solution}
+    Compute the composition, multiplying numerator and denominator by $2x+3$:
+    \[
+      f(f(x)) = \frac{c \cdot \dfrac{cx}{2x+3}}{2 \cdot \dfrac{cx}{2x+3} + 3}
+              = \frac{c^2 x}{2cx + 3(2x+3)}
+              = \frac{c^2 x}{(2c+6)x + 9}.
+    \]
+    Setting this equal to $x$ and clearing the denominator gives
+    \[ c^2 x = x\big[(2c+6)x + 9\big] = (2c+6)x^2 + 9x, \]
+    so $(2c+6)x^2 + (9 - c^2)x = 0$ must hold for \emph{every} allowed $x$. A polynomial
+    that is identically zero has all coefficients zero:
+    \[ 2c + 6 = 0 \quad\text{and}\quad 9 - c^2 = 0. \]
+    The first gives $c = -3$; the second gives $c = \pm 3$. Only $c = -3$ satisfies both.
+    \[ \answer{c = -3} \]
+    Check: with $f(x) = \dfrac{-3x}{2x+3}$,
+    \[
+      f(f(x)) = \frac{-3 \cdot \dfrac{-3x}{2x+3}}{2 \cdot \dfrac{-3x}{2x+3} + 3}
+              = \frac{9x}{-6x + 6x + 9} = \frac{9x}{9} = x. \;\checkmark
+    \]
+    \textit{Note: $f$ being its own inverse is what $f(f(x)) = x$ says. Students who
+    substitute a single convenient value of $x$ (say $x = 1$) can find a candidate for $c$
+    but have not shown the identity holds for all $x$; that is worth partial credit only
+    if they verify the candidate afterwards, as above.}
+  \end{solution}
+
+\end{questions}
+
+\vspace{6pt}
+\noindent\textcolor{rule}{\rule{\linewidth}{0.4pt}}\\[2pt]
+\source{All problems are taken from Richard Rusczyk, David Patrick, and Ravi Boppana,
+\textit{Art of Problem Solving: Intermediate Algebra}, Chapters 1--2 (Review Problems).
+Every answer above was verified symbolically with SymPy.}
+
+\end{document}

@@ -1,0 +1,64 @@
+% Shared preamble for the Chapter 1-2 quiz and its solutions.
+\usepackage[letterpaper,margin=1in,top=0.9in,bottom=0.9in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{rule}{gray}{0.45}
+\definecolor{faint}{gray}{0.35}
+
+% --- running head / foot ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\footnotesize\color{faint}\DocRunningHead}
+\fancyhead[R]{\footnotesize\color{faint}\DocShortTitle}
+\fancyfoot[C]{\footnotesize\color{faint}Page \thepage\ of \pageref{LastPage}}
+\usepackage{lastpage}
+
+% --- part headings ---
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{16pt}{6pt}
+\newcommand{\parthead}[2]{%
+  \section*{\rule[-2pt]{3pt}{14pt}\hspace{6pt}#1\hfill\normalsize\mdseries\color{faint}#2}%
+  \vspace{-4pt}\noindent\textcolor{rule}{\rule{\linewidth}{0.4pt}}\vspace{2pt}}
+
+% --- title block ---
+\newcommand{\quiztitle}[3]{%
+  \begin{center}
+    {\footnotesize\color{faint}\MakeUppercase{#1}}\\[3pt]
+    {\LARGE\bfseries #2}\\[4pt]
+    {\small\color{faint}#3}
+  \end{center}
+  \vspace{2pt}\noindent\textcolor{rule}{\rule{\linewidth}{1pt}}\vspace{6pt}}
+
+% --- name / date / score rules ---
+\newcommand{\namedate}{%
+  \noindent\small
+  Name:\ \rule[-4pt]{0.36\linewidth}{0.4pt}\hfill
+  Date:\ \rule[-4pt]{0.16\linewidth}{0.4pt}\hfill
+  Score:\ \rule[-4pt]{0.09\linewidth}{0.4pt}\,/\,100\par\vspace{10pt}}
+
+% --- question list ---
+\newlist{questions}{enumerate}{1}
+\setlist[questions]{label=\textbf{\arabic*.},leftmargin=*,labelsep=8pt,itemsep=0pt,parsep=4pt}
+
+% Vertical filler between questions. Using \vfill (rather than a fixed \vspace)
+% means work space is distributed to fill each page and is never silently
+% discarded at a page break.
+\newcommand{\work}{\vfill}
+
+% solution formatting
+\newcommand{\answer}[1]{\fbox{$\displaystyle #1$}}
+\newcommand{\answertext}[1]{\fbox{\parbox{0.92\linewidth}{#1}}}
+\newenvironment{solution}
+  {\par\vspace{2pt}\begingroup\small\setlength{\leftskip}{12pt}%
+   \noindent\textcolor{rule}{\rule[-1pt]{1.2pt}{\baselineskip}}\hspace{4pt}\ignorespaces}
+  {\par\endgroup\vspace{8pt}}
+\newcommand{\source}[1]{{\footnotesize\color{faint}\textit{#1}}}
